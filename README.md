@@ -25,7 +25,7 @@ $ ./manage.py createsuperuser
 $ ./manage.py runserver
 </pre>
 
-Работа с API
+<h2>Работа с API</h2>
 <pre>
 {
     "api/poll": "http://127.0.0.1:8000/api/poll/",
