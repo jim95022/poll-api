@@ -1,42 +1,60 @@
 API для системы опросов пользователей.
 
-Загрузка
+<h2>Загрузка</h2>
+<pre>
 $ git clone https://github.com/jim95022/poll-api.git
-
-Установка
+</pre>
+<h2>Установка</h2>
+<pre>
 $ cd poll-api && virtualenv venv --python=3.8 && . venv/bin/activate && pip install -r requirements.txt
-
-Настройка Dgango REST framework
+</pre>
+<h2>Настройка Dgango REST framework</h2>
+<pre>
 $ cd test_engine
 
 $ ./manage.py migrate
+</pre>
 
-Создадим админ пользователя
+<h2>Создадим админ пользователя</h2>
+<pre>
 $ ./manage.py createsuperuser
+</pre>
 
-Заупуск
+<h2>Заупуск</h2>
+<pre>
 $ ./manage.py runserver
+</pre>
+
 Работа с API
+<pre>
 {
     "api/poll": "http://127.0.0.1:8000/api/poll/",
     "api/questions": "http://127.0.0.1:8000/api/questions/",
     "api/results": "http://127.0.0.1:8000/api/results/"
 }
-GET /api/poll/ для получения всех опросов с id вопросами GET /api/questions/ для получения списка всех вопросов GET /api/questions/ для получения вопроса с
+</pre>
+<pre>
+GET /api/poll/ для получения всех опросов с id вопросами 
+GET /api/questions/ для получения списка всех вопросов 
+GET /api/questions/<id> для получения вопроса с <id>
 
 GET /api/results/user/id для ответов пользователя
-
+</pre>
 Добавить ответ на вопрос
-
+<pre>
 POST api/results/
-
+</pre>
+<pre>
 {
     "user": null,
     "poll_name": "",
     "result": ""
 }
+</pre>
 вход в админ кабинет
-Добавить новый опрос POST admin/tests/poll/add/
+Добавить новый опрос 
+<pre>
+POST admin/tests/poll/add/
 
 {
     "qstns": [],
@@ -45,3 +63,4 @@ POST api/results/
     "end_date": null,
     "description": ""
 }
+</pre>
