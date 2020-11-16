@@ -51,7 +51,7 @@ POST api/results/
     "result": ""
 }
 </pre>
-вход в админ кабинет
+<h2>вход в админ кабинет</h2>
 Добавить новый опрос 
 <pre>
 POST admin/tests/poll/add/
