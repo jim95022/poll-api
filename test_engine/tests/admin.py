@@ -18,8 +18,8 @@ class QuestionsAdmin(admin.ModelAdmin):
 
 
 class ResultsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user_id', 'slug','result')
-    list_display_links = ('slug',)
+    list_display = ('id', 'user', 'poll_name','result')
+    list_display_links = ('poll_name',)
 
 
 admin.site.register(Poll, PollAdmin)

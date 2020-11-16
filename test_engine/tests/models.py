@@ -32,12 +32,12 @@ class Questions(models.Model):
 
 
 class Results(models.Model):
-    user_id = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=150, unique=True)
+    user = models.IntegerField()
+    poll_name = models.SlugField(max_length=150, blank=True)
     result = models.TextField(blank=True)
 
     def __str__(self):
-        return '{}'.format(self.user_id)
+        return '{}'.format(self.user)
 
 
     

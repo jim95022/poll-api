@@ -7,7 +7,7 @@ class PollSerializer(serializers.ModelSerializer):
     class Meta:
         model = Poll
         fields = '__all__'
-        read_only_fields =  ('start_date',)
+        read_only_fields = ('start_date',)
 
 
 class QuestionsSerializer(serializers.ModelSerializer):
